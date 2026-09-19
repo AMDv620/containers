@@ -90,7 +90,7 @@ RUN python -c "import torch; print('torch', torch.__version__, torch.version.hip
 # === OFFICIAL VLLM ===
 
 ARG VLLM_REPO=https://github.com/vllm-project/vllm.git
-ARG VLLM_REF=v0.28.1
+ARG VLLM_REF=v0.29.0
 RUN git clone --depth 1 --branch ${VLLM_REF} ${VLLM_REPO} /tmp/vllm-src
 WORKDIR /tmp/vllm-src
 # Fetch and apply PR #52391 for gfx1030 (RDNA2) support before compiling

@@ -89,7 +89,7 @@ RUN python -c "import torch; print('torch', torch.__version__, torch.version.hip
 
 # === RDNA2 FORK (ACTIVE) ===
 ARG VLLM_REPO=https://github.com/leapdragon/vllm-rdna2-qwen.git
-ARG VLLM_REF=qwen38-flash-next
+ARG VLLM_REF=rdna2/qwen38-flash-next
 RUN git clone --depth 1 --branch ${VLLM_REF} ${VLLM_REPO} /tmp/vllm-src
 WORKDIR /tmp/vllm-src
 # === END RDNA2 FORK ===

@@ -161,7 +161,7 @@ ENV PYTORCH_ROCM_ARCH="gfx1030" \
 
 # Build vLLM with no isolation, using the same ROCm index for any remaining deps
 # EDITABLE INSTALL (-e) added as requested
-RUN pip install -v -e --no-build-isolation . \
+RUN pip install -v -e . \
     --extra-index-url https://repo.amd.com/rocm/whl-multi-arch/
 
 # -------------------------------------------------------------------------
